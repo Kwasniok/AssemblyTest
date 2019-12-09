@@ -26,7 +26,8 @@ fi
 # run
 echo "running ..."
 ./bin/main
-if [ $? -ne 0 ]; then
-    echo "Executalbe stopped with exit code $?." >&2
+ret=$?
+if [ $ret -ne 0 ]; then
+    echo "Executalbe stopped with exit code $ret." >&2
     exit 1
 fi
