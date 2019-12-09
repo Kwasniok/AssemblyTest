@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+name="main"
+
 # build
-nasm -f macho src/main.asm
-ld -macosx_version_min 10.7.0 -o bin/main src/main.o
+nasm -f macho src/$name.asm
+ld -macosx_version_min 10.7.0 -o bin/$name src/$name.o
 # run
-./bin/main
+./bin/$name
