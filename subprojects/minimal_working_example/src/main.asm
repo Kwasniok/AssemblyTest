@@ -1,4 +1,4 @@
-; target: MAC OS 10.7 or higher, MACH-O (32 bit)
+; target: MAC OS 10.7 or higher, MACH-O, i386
 ; description: smallest working programm which simply exits via sys_exit
 
 section .text

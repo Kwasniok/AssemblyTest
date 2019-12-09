@@ -18,7 +18,10 @@ fi
 # build
 echo "building ..."
 nasm -f macho src/main.asm
-ld -macosx_version_min 10.7.0 -o bin/main src/main.o
+# - target legacy version of OS X with full 32bit support
+# - target 32bit intel architecture (i386)
+# - disable PIE 8position independent executable) as it is now deprocated
+ld -macosx_version_min 10.7.0 -arch i386 -no_pie -o bin/main src/main.o
 if [ $? -ne 0 ]; then
     echo "Could not build subproject." >&2
     exit 1

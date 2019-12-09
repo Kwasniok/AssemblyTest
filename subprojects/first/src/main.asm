@@ -1,4 +1,4 @@
-; target: MAC OS 10.7 or higher, MACH-O (32 bit)
+; target: MAC OS 10.7 or higher, MACH-O, i386
 ; description: hello world
 
 
