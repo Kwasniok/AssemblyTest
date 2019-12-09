@@ -4,4 +4,4 @@
 
 ## executables
 # bin
-bin/*
+subprojects/*/bin/*

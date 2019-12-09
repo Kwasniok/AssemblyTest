@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-# first argument is the target_name of the target
-target_name=$1
+# first argument is the name of the subproject
+subproject_name=$1
 
+# change directory
+cd subprojects/$subproject_name
+# provide bin folder
+mkdir -p bin
 # build
-nasm -f macho src/$target_name.asm
-ld -macosx_version_min 10.7.0 -o bin/$target_name src/$target_name.o
+echo "building subproject $subproject_name ..."
+nasm -f macho src/main.asm
+ld -macosx_version_min 10.7.0 -o bin/main src/main.o
 # run
-./bin/$target_name
+echo "running subproject $subproject_name ..."
+./bin/main
