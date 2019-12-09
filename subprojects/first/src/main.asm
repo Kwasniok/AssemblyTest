@@ -33,7 +33,7 @@ exit:
     ; sys_call of sys_exit (OPCODE 1) in BSD convention
     mov     eax, 1                  ; store opcode in main register
     ; push arguments in reverse order
-    push    dword 0                 ; push exit status
-    sub     esp, 12                 ; align stack (to 16 bytes)
+    push    dword 4                 ; push exit status
+    sub     esp, 4                  ; align stack (to 8 bytes)
 
     int     0x80                    ; perform system call

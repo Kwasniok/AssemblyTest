@@ -5,6 +5,6 @@ section .text
 global start
 start:
     push    dword 0                 ; push exit status
-    sub     esp, 12                 ; align stack (to 16 bytes)
+    sub     esp, 4                  ; align stack (to 8 bytes)
     mov     eax, 1                  ; store opcode for sys_exit
     int     0x80                    ; perform system call
