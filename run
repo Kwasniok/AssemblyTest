@@ -8,8 +8,8 @@ if [ $? -ne 0 ]; then
     echo "error: Could not access subproject folder." >&2
     exit 1
 fi
-# run
-./main
+# run (forward arguments)
+./main "${@:2:99}"
 ret=$?
 if [ $ret -ne 0 ]; then
     echo "warning: Executalbe stopped with exit code $ret." >&2
