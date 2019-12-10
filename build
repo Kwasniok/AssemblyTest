@@ -21,6 +21,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 nasm -f macho main.asm
+if [ $? -ne 0 ]; then
+    echo "error: Could not build subproject." >&2
+    exit 1
+fi
 cd ..
 # - target legacy version of OS X with full 32bit support
 # - target 32bit intel architecture (i386)
