@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# first argument is the name of the subproject
+subproject_name=$1
+# change directory
+cd subprojects/$subproject_name/bin > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "error: Could not access subproject folder." >&2
+    exit 1
+fi
+# debug
+lldb main
