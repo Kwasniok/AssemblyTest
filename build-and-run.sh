@@ -17,7 +17,13 @@ if [ $? -ne 0 ]; then
 fi
 # build
 echo "building ..."
-nasm -f macho src/main.asm
+cd src
+if [ $? -ne 0 ]; then
+    echo "Could not access src folder." >&2
+    exit 1
+fi
+nasm -f macho main.asm
+cd ..
 # - target legacy version of OS X with full 32bit support
 # - target 32bit intel architecture (i386)
 # - disable PIE 8position independent executable) as it is now deprocated
