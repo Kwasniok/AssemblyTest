@@ -25,3 +25,10 @@ There are the following tools available as scripts:
 | `./run <subproject> <args>` | run the executalbe |
 | `./build_and_run <subproject> <args>` | build and run the executalbe |
 | `./debug <subproject>`  | debug the executable with [LLDB](https://lldb.llvm.org/) |
+
+# Useful Commands
+Further useful commands are:
+
+| command | description |
+|---------|-------------|
+| `file <file path>` | get details about the file type (beyond the extension, e.g. architecture of executables) |
