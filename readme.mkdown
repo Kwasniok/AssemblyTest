@@ -26,6 +26,9 @@ There are the following tools available as scripts:
 | `./build_and_run <subproject> <args>` | build and run the executalbe |
 | `./debug <subproject>`  | debug the executable with [LLDB](https://lldb.llvm.org/) |
 
+# Target Specifications
+All subprojects are designed for MAC OS X 10.7 or higher and i386 (32bit) architecture with little endian.
+
 # Subprojects
 The [subprojects](subprojects) are:
 
