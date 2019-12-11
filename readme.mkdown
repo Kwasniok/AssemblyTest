@@ -39,3 +39,14 @@ Further useful commands are:
 | command | description |
 |---------|-------------|
 | `file <file path>` | get details about the file type (beyond the extension, e.g. architecture of executables) |
+
+# Useful Links
+- [complete NASM instruction set reference](http://home.myfairpoint.net/fbkotler/nasmdocc.html)
+- [system calls on MAC OS X (32bit and 64bit)](https://filippo.io/making-system-calls-from-assembly-in-mac-os-x/)
+_Note: Alignment for 32bit can be 8 bytes instead of 16 bytes!_
+- [more on system calls on MAC OS X for 64bit](http://thexploit.com/secdev/mac-os-x-64-bit-assembly-system-calls/)
+- [system call table for MAC OS X](https://opensource.apple.com/source/xnu/xnu-1504.3.12/bsd/kern/syscalls.master)
+- [system call table for macOS (64bit)](https://sigsegv.pl/osx-bsd-syscalls/)
+- [IA-32 calling convention](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/LowLevelABI/130-IA-32_Function_Calling_Conventions/IA32.html)
+- [LLDB command cheat sheet](https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html)
+
