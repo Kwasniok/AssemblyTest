@@ -26,6 +26,13 @@ There are the following tools available as scripts:
 | `./build_and_run <subproject> <args>` | build and run the executalbe |
 | `./debug <subproject>`  | debug the executable with [LLDB](https://lldb.llvm.org/) |
 
+# Subprojects
+The [subprojects](subprojects) are:
+
+| name | description |
+|------|-------------|
+| `nasmXX` | inspired by the lessons on [asmtutor.com](https://asmtutor.com/) (numbers do not match) |
+
 # Useful Commands
 Further useful commands are:
 
