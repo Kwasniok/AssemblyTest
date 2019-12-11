@@ -12,7 +12,7 @@ fi
 echo "build ok"
 # run
 echo "running $subproject_name ..."
-./run $subproject_name
+./run $subproject_name "${@:2:99}"
 if [ $? -ne 0 ]; then
     exit 1
 fi
