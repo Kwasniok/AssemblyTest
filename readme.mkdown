@@ -1,0 +1,27 @@
+# File Structure
+
+There are multiple subprojects in the `subprojects` folder:
+```
+  - o - subprojects
+    + - o subproj01
+        + - o bin
+            + - o main
+        + - o src
+            + - o main.nasm
+            ...
+    + - o subproj02
+        ...
+    ...
+```
+Within each subproject `bin` contains the executable `main` and `src` holds the NASM source code file `main.nasm` and potentially more source 
+code files.
+
+# Tools
+There are the following tools available as scripts:
+
+| command | tool |
+|--------|-------|
+| `./build <subproject>` | build the executalbe (must be performed before running) |
+| `./run <subproject> <args>` | run the executalbe |
+| `./build_and_run <subproject> <args>` | build and run the executalbe |
+| `./debug <subproject>`  | debug the executable with [LLDB](https://lldb.llvm.org/) |
