@@ -1,5 +1,5 @@
 ; target: MAC OS 10.7 or higher, MACH-O, i386
-; description: hello world program with null-terminated string
+; description: ask for and print name program
 
 %include    "quit.nasm"
 %include    "str.nasm"
