@@ -53,7 +53,8 @@ sprintlf:
 
 
 section .text
-; print single digit number (eax) in base 10 to stdout
+; print integer (eax) in base 10 to stdout
+; TODO: make base (ebx) a variable
 iprint:
 .prolog:
     ; store registers
@@ -94,8 +95,8 @@ iprint:
     ret
 
 section .text
-; print single digit number [0-9] (eax) in base 10 incl. a line feed to stdout
-; wrapps around iprint, no boundary checks performed
+; print integer (eax) in base 10 incl. a line feed to stdout
+; wrapps around iprint
 iprintlf:
 .base:
     call    iprint                 ; print digit
