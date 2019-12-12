@@ -5,3 +5,7 @@
 ## executables
 # bin
 subprojects/*/bin/*
+
+## tools
+# xcode
+xcode/*
