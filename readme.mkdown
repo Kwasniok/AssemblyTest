@@ -23,8 +23,11 @@ There are the following tools available as scripts:
 |--------|-------|
 | `./build <subproject>` | build the executalbe (must be performed before running) |
 | `./run <subproject> <args>` | run the executalbe |
-| `./build_and_run <subproject> <args>` | build and run the executalbe |
 | `./debug <subproject>`  | debug the executable with [LLDB](https://lldb.llvm.org/) |
+| `./disassemble <subproject> [<label>]` | disassemble text and data section of the executalbe (starting at `<label>`) |
+| `./symbol_table <subproject>` | show symbol table of executable (may not be complete) |
+| `./stats <subproject>` | show stats (size of executable and SLOC) |
+| `./clean <subproject>` | remove executable and temporary build files |
 
 # Target Specifications
 All subprojects are designed for MAC OS X 10.7 or higher and i386 (32bit) architecture with little endian.
