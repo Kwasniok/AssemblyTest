@@ -2,11 +2,25 @@
 
 # first argument is the name of the subproject
 subproject_name=$1
-# change directory
-cd subprojects/$subproject_name/bin > /dev/null 2>&1
+
+# build
+./build $subproject_name
+# change directory (subproject)
+cd subprojects/$subproject_name > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "error: Could not access subproject folder." >&2
     exit 1
 fi
-# debug
-lldb main
+# change directory (bin)
+cd bin > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "error: Could not access subproject's bin folder." >&2
+    exit 1
+fi
+# debug (via lldb)
+if [ -f main ]; then
+    lldb main
+else
+    echo "error: Could find executable." >&2
+    exit 1
+fi

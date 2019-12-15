@@ -2,7 +2,10 @@
 
 # first argument is the name of the subproject
 subproject_name=$1
-# change directory
+
+# build
+./build $subproject_name
+# change directory (subproject)
 cd subprojects/$subproject_name > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "error: Could not access subproject folder." >&2

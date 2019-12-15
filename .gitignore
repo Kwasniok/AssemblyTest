@@ -1,6 +1,8 @@
 ## build process
 # object files
 *.o
+# make log files
+**/make.log
 
 ## executables
 # bin

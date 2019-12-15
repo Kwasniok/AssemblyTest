@@ -8,29 +8,10 @@ if [ $? -ne 0 ]; then
     echo "error: Could not access subproject folder." >&2
     exit 1
 fi
-# provide bin folder
-mkdir -p bin > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-    echo "error: Could not create bin in subproject folder." >&2
-    exit 1
-fi
-# build
-cd src > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-    echo "error: Could not access src folder." >&2
-    exit 1
-fi
-nasm -f macho main.asm
-if [ $? -ne 0 ]; then
-    echo "error: Could not build subproject." >&2
-    exit 1
-fi
-cd ..
-# - target legacy version of OS X with full 32bit support
-# - target 32bit intel architecture (i386)
-# - disable PIE 8position independent executable) as it is now deprocated
-ld -macosx_version_min 10.7.0 -arch i386 -no_pie -o bin/main src/main.o
-if [ $? -ne 0 ]; then
-    echo "error: Could not build subproject." >&2
+# build (via makefile)
+if [ -f makefile ]; then
+    make build > make.log
+else
+    echo "error: Could find makefile." >&2
     exit 1
 fi

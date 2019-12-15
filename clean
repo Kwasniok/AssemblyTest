@@ -8,5 +8,10 @@ if [ $? -ne 0 ]; then
     echo "error: Could not access subproject folder." >&2
     exit 1
 fi
-# delete bin
-rm -r bin >/dev/null 2>&1
+# clean (via makefile)
+if [ -f makefile ]; then
+    make clean > make.log
+else
+    echo "error: Could find makefile." >&2
+    exit 1
+fi
