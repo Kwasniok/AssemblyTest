@@ -37,6 +37,7 @@ The [subprojects](subprojects) are:
 
 | name | description |
 |------|-------------|
+| `minimal_working_example` | simplest valid program possible |
 | `nasmXX` | inspired by the lessons on [asmtutor.com](https://asmtutor.com/) (numbers do not match) |
 
 # Useful Commands
