@@ -57,5 +57,6 @@ _Note: Alignment for 32bit can be 8 bytes instead of 16 bytes!_
 - [system call table for macOS (64bit)](https://sigsegv.pl/osx-bsd-syscalls/)
 - [IA-32 calling convention](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/LowLevelABI/130-IA-32_Function_Calling_Conventions/IA32.html)
 - [LLDB command cheat sheet](https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/gdb_to_lldb_transition_guide/document/lldb-command-examples.html)
+- [System V ABI for i386 (conventions)](https://www.uclibc.org/docs/psABI-i386.pdf)
 - [GNU make documentation](https://www.gnu.org/software/make/manual/make.html)
 
