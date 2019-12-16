@@ -34,10 +34,10 @@ start:
     mov     [esp+8], eax            ; buf
 .next:
     ; print ">>"
-    mov     [esp+12], dword str_in
+    mov     [esp+12], dword str_in  ; str
     call    swrite
     ; read
-    mov     [esp+12], dword nbyte   ; nbyte
+    mov     [esp+12], dword nbyte   ; nbyte (note: buf is already set)
     call    sread
     ; if *buf == 'q' terminate
     cmp     [esp+16], byte 0x71     ; if *buf is "q"
@@ -48,12 +48,12 @@ start:
     mov     [esp+12], dword str_out ; str
     call    swrite
     mov     eax, esp
-    add     eax, 16
+    add     eax, 16                 ; buf
     mov     [esp+12], eax           ; str
     call    swritelf
     jmp     .success
 .fail:
-    mov     [esp+12], dword str_fail
+    mov     [esp+12], dword str_fail ; str
     call    swritelf
 .success:
     jmp     .next
